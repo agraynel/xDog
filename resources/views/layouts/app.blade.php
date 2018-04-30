@@ -11,7 +11,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- Styles -->
-    <link href="{{ asset('') }}" rel="stylesheet">
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
 <div id="app">
@@ -27,11 +27,15 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <!-- Left Side Of Navbar -->
                 <ul class="navbar-nav mr-auto">
-
                 </ul>
 
                 <!-- Right Side Of Navbar -->
                 <ul class="navbar-nav ml-auto">
+                    <li><a class="nav-link" href="{{ route('home') }}">{{ __('Home') }}</a></li>
+                    <li><a class="nav-link" href="{{ route('about') }}">{{ __('About') }}</a></li>
+                    <li><a class="nav-link" href="{{ route('agent') }}">{{ __('Agents') }}</a></li>
+                    <li><a class="nav-link" href="{{ route('school') }}">{{ __('Schools') }}</a></li>
+
                     <!-- Authentication Links -->
                     @guest
                     <li><a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a></li>

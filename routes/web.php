@@ -13,4 +13,16 @@
 
 Auth::routes();
 
+// Home controller
 Route::get('/', 'HomeController@index')->name('home');
+
+// About controller
+Route::get('/about', 'AboutController@index')->name('about');
+Route::get('/member', 'AboutController@member')->name('member');
+
+// Agent controller
+Route::get('/agent', 'AgentController@index')->name('agent');
+
+// School controller
+Route::get('/school', 'SchoolController@index')->name('school');
+
